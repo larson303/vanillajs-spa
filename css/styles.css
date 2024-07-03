@@ -1,78 +1,122 @@
 html,
 body {
-    font-family: sans-serif;
-    margin: 0;
-    height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+  height: 100%;
 }
 
 p {
-    margin-block-start: 0;
-    text-indent: 1rem;
+  margin-block-start: 0;
+  text-indent: 1rem;
 }
 
 hr {
-    border: none;
-    height: 1px;
-    background-color: lightgray;
-    width: 40px;
-    margin: 1.5rem 0 1rem 0;
+  border: none;
+  height: 1px;
+  background-color: lightgray;
+  width: 40px;
+  margin: 1.5rem 0 1rem 0;
+}
+
+#title {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 #root {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 #main-page {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-
-    border-right: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #8499B1;
 }
 
-.sidebar > a {
-    margin: 0.5rem 0;
+.sidebar a {
+  margin: 0.5rem 0;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 0 1rem;
+#page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  animation: fadeInAnimation ease 2s;
+  transition: 0.3s;
 }
 
 .align-center {
-    align-items: center;
+  align-items: center;
 }
 
-.socials-container {
-    display: flex;
-    justify-content: space-between;
+.nav-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: #A5C4D4;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: 0.3s;
+
 }
 
-.socials-card {
-    display: flex;
-    align-items: center;
-
-    border: 1px solid lightgray;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-
-    text-decoration: none;
-    color: unset;
+.nav-button:hover {
+  background-color: #8FC9E6;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.socials-card:hover {
-    background-color: lightgray;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.socials-card > i {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+.hide-small {
+      display: none;
+}
+
+.hide-large {
+  display: none;
+}
+
+.hide-medium {
+  display: none;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Vanilla SPA Router</title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
-    </head>
+  <head>
+    <title>Vanilla SPA</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-    <body>
-        <div id="root">
-            <nav id="main-nav" class="sidebar">
-                <a href="/" onclick="route(event)">Home</a>
-                <a href="/about" onclick="route(event)">About</a>
-                <a href="/lorem" onclick="route(event)">Lorem</a>
-            </nav>
-            <div id="main-page"></div>
-        </div>
+  <body>
+    <div id="root">
+      <nav id="main-nav" class="sidebar">
+        <a href="/" onclick="route(event)" class="nav-button">Home</a>
+        <a href="/blog" onclick="route(event)" class="nav-button">Blog</a>
+        <a href="/about" onclick="route(event)" class="nav-button">About</a>
+      </nav>
 
-        <script src="js/router.js"></script>
-    </body>
+      <div class="hide hide-large hide-medium">
+        <a href="/" class="nav-button" onclick="route(event)">Home</a>
+        <a href="/blog" class="nav-button" onclick="route(event)">Blog</a>
+        <a href="/about" class="nav-button" onclick="route(event)">About</a>
+      </div>
+
+    <div id="main-page">
+        <h1 id="title">Vanilla JS Routing</h1>
+        <div id="page-container">/div>
+      </div>
+    </div>
+
+    <script src="js/router.js"></script>
+  </body>
 </html>
